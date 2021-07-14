@@ -34,6 +34,34 @@
 $ npm install
 ```
 
+## Complete the code
+
+You must fill the information about database in `src/app.module.ts`
+
+```js
+const TypeOrm = TypeOrmModule.forRoot({
+  type: 'mysql',
+  host: '',
+  port: 3306,
+  username: '',
+  password: '',
+  database: "",
+  autoLoadEntities: true,
+  synchronize: true
+})
+```
+
+If you want to login in Wechat MiniProgram, please fill `src/user/login/login.service.ts`
+
+```js
+const params = {
+            js_code: code,
+            appid: "",  // 小程序的appid
+            secret: "",   // 小程序的secret
+            grant_type: "authorization_code"
+        }
+```
+
 ## Running the app
 
 ```bash
